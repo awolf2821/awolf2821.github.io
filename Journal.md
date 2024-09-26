@@ -27,5 +27,6 @@ different modifiers can be used to change the text, for example:
 - this
 - is
 - a
-- list.\
+- list.
+
 markdown is a vital tool for creating text based websites easily and effectively.
