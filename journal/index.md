@@ -4,3 +4,4 @@ Web Design.\
 ## Entries:
 - [September 16 - Command Line Tools](entries/Terminal.md)
 - [September 30 - Encryption Activity](entries/Encryption.md)
+- [October 17 - Wordpress Notes](entries/Notes.md)
