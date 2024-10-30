@@ -23,14 +23,14 @@ the same as the first. With this principle applied, our example becomes $2x(3x-5
 ### 
 The last step involves combining the two factors, which is extremely simple. simply write the factors together\
 in a grouping symblol, and add the grouping symbol from the last step, which should leave you with an equation that\
-looks like this: $(2x-2)(3x+4). This is known as factored form. The factored form for our example is $(2x+7)(3x-5).
+looks like this: $(2x-2)(3x+4)$. This is known as factored form. The factored form for our example is $(2x+7)(3x-5)$.
 ## Factored Form
 Factored form is another form for quadratic equations that is easy to read. factored form contains the two x-coordinates\
 of the x intercepts of the perabola as plain numbers (though they are opposites. factored form looks like this:
 ### $(Ax-b)(Cx-d)$
 B and D are the X-Intercepts. factored form can easily be returned to standard form by multiplying in a certain patterm.\
 Following First (First number in each grouping is multiplied), Outside (Outside numbers are multiplied), inside (Inside numbers\
-are multiplied, and Last (Last numbers are multiplied. You can remember this order using an acronym FOIL.
+are multiplied, and Last (Last numbers are multiplied). You can remember this order using an acronym FOIL.
 ## Summary
 Quadratic equations have many different forms. The most common is standard form, but standard form can easily be factored\
 into different forms that are much more readable, such as Factored Form. This process is relatively simple and involves\
