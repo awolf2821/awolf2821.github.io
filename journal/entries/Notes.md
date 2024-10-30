@@ -26,4 +26,4 @@ in 2008 and gained popularity in the early 2010's. The tool features an extensiv
 and had more flexible payment options. all of these factors have contributed to the tool's widespread use\
 and adaptation within organizations, as well as it's major popularity. 
 
-![Wordpress Homepage](Wordpress Homepage.png)
+[Wordpress Homepage](Wordpress_Homepage.png)
