@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About Git</title>
+<script src="js/init.js"></script>
+</head>
+<body>
+<h1>Git</h1>
+<h2>Introduction to Git</h2>
+<p>Git was created in 2005 by Linus Torvalds, the founder of Linux, as a way to keep track of<br>
+files on a computer. Git is essential in the world of Web Development, Programming, and Computer<br>
+science.</p>
+<p>Git works by uploading files to a remote repository, often Github, in series of updates called<br> Commits. Only certain computers are allowed to upload to the repository, but anybody can download<br> the files hosted. Github is often used by small developers/community devs to host projects.<br>
+Github can also host a basic website. In this class, Git will be used to upload and check work.</p>
+<hr>
+<h2>Git Commands</h2>
+<p>Git is acessed via the unix command line, and is used via the unix command line. There are<br>
+many different commands within git that can be used, but for this class, you will only need these<br> Basic commands.</p>
+<p><code>git status</code><br>Gets current status of staged files, local repo, and the remote.</p>
+<p><code>git add</code><br>Stages the specified file (after command) for commit</p>
+<p><code>git commit -m "message"</code><br>
+Commits changes made to staged files to local repository. "Message" may be changed to the<br>
+message to appear on the commit.</p>
+<p><code>git push</code><br>pushes changes in local repo to the remote</p>
+<p>You may use other git commands in your time in this course. That's fine, but these 4 basic<br>
+commands are the prominent ones. Whenever you make changes to your repo, all four will be used<br>
+try to memorize these, it will do you good to make a habit of commiting to you repo after you are<br> done making changes.
+<hr> 
+<h2>Git Stages</h2>
+<p>Git has three stages where files can be stored. On the computer itself, the local repository,<br
+> and the remote repository. The remote repository is the only place where files are stored not on<br> the computer itself. First, files are staged for commit with various git commands, such as<code>git add</code>. They are commited to the local repository with <code>git commit -m "message"</code>. Finally, the changes are made to the remote with <code>git push</code>.</p>
+<hr>
+<h2>Git Setup</h2>
+<p>Setting up your repository is an involved process, and takes a long time. Chris or Jeff will<br>
+help you, but this is the basic process.</p>
+<h4>Step 1:</h4>
+<p>Create a Github account using a personal email if you do not already have one. Next, create a<br>
+new repository. if you have not already, run the <code>git</code> command from the terminal to download git</p>
+<h4>Step 2:</h4>
+<p>Run the <code>ssh keygen -t rsa</code> command from your terminal. Skip the questions by pressing enter<br> A new folder should be created in <code>~/Users/yourusername.</code> it should be called <code>.ssh</code>. Inside, there should Be two files, one named <code>id_rsa</code> <br>
+ and another named <code>id_rsa.pub</code>. Your filenames may vary. but the .pub should still exist.</p>
+<h4 style="color:red">IMPORTANT!</h4>
+<p style ="color:red"><strong>The file named id_rsa is your private key. NEVER under ANY CIRCUMSTANCES<br>should it go onto the internet. This key allows encrypted data going to your computer to be<br> decrypted. Which poses a MASSIVE security risk.</strong></p>
+<h4>Step 3:</h4>
+<p>View your public key by running the command <code>cat ~/.ssh/id_rsa.pub.</code> Copy the entire text<br> starting from ssh-rsa. Click your profile picture in the github homepaage, navigate to "settings",<br> SSH and GPG Keys, click "New SSH Key"
+<h4>Step 4:</h4>
+<p>Paste the text output from the terminal into the window. Set the title as "My school MacBook" or<br> another appropriate name. When you are done, click "Add SSH Key"</p>
+<h4>Step 5:</h4>
+<p>Click "Create Repository" in the homepage. For the title, your repository name needs to be <br>
+{your github username}.github.io. This is case-sensitive. Change no other settings and click<br>
+"Create Repository". Once you are done, a repository setup page will appear, do not go further<br>
+but leave the page open and return to the terminal.</p>
+<h4>Step 6:</h4>
+<p>Using the terminal, run the following commands. This will create a folder on your desktop where<br>
+you can store your website code.</p>
+<pre>cd Desktop<br>mkdir website<br>cd website</pre></p>
+<h4>Step 7:</h4> 
+<p>Run these two commands. replace username and email with your github username and the email you used<br> to setup github. <pre>git config --global user.name "username"<br>git config --global user.email"email"<br></pre> ensure that you are in the website directory by using <code>pwd</code></p>
+<h4>Step 8:</h4>
+<p>On github, select the SSH button. You will see a series of commands in the window below. Copy<br>
+these commands using Ctrl-C or the icon. Run these commands in your terminal, and type "yes" to<br>
+any questions that pop up. Once you are done, refresh your github page, and it should have changed.</p>
+<p>After this step, your setup is complete. The repository and your website folder are linked. <br>
+There should be some various files in the website folder. ignore these for now until you are <br>
+told to edit them.</p>
+<hr>
+<h2>Final Remarks</h2>
+<p>Git is an amazingly useful tool that you will use throughout the entire year, in this class and<br> possibly other places as well. Practice the commands needed to commit to your repository, so that<br>you remember them easily when you need to commit and don't need to look back on this tutorial.<br>with that, have a great year.</p>
+</body>
+</html>
