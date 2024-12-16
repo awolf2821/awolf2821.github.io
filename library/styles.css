@@ -6,19 +6,20 @@ header {
 	justify-content: space-between;
 	padding: 10px;
 	text-align: center;
-}
-nav{
-	background-color:Wheat;
+	font-family:'Arial',sans-serif;
 }
 li {
-	float: left;
+	float:center;
+	text-align:center;
+	list-style-type:none;
+	font-family:'Helvetica',sans-serif;
 }
 li a {
-	display: block;
-	color: black;
-	text-align: center;
-	padding: 16px;
-	text-decoration: none;
+	display:block;
+	color:black;
+	text-align:center;
+	margin:20px;
+	text-decoration:none;
 }
 td, th, table {
 	border:2px solid;
