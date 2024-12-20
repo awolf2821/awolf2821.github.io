@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>Grid</title>
+	<script src="../js/init.js"></script>
+<style>
+    #grid{
+	display:grid;
+	grid-template-rows:1fr 1fr 1fr;
+	grid-template-columns:1fr 1fr 1fr;
+	height:80vh;
+	gap:10px;
+    }
+    #item{
+	grid-row-start:2;
+	background-color:LightBlue;
+	grid-column-start:2;
+		
+</style>	
+    </head>
+    <body>
+	<div id="grid">
+		<div id="item"></div>
+	</div>
+    </body>
+</html>
