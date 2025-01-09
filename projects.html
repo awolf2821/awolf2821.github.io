@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <title>My Projects</title>
+    <script src="js/init.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <style>
+	#page2grid{
+	    display:grid;
+	    grid-template-rows:repeat(15, 1fr)
+	    grid-template-columns:repeat(15, 1fr)
+	}
+	.body{
+	    background-color:LightBlue;
+	}
+	#title{
+	    grid-row-start:1;
+	    grid-column:1/8;
+	    text-align:left;
+	}
+	#cornerstone{
+	    grid-row-start:2;
+	    grid-row-end:5;
+	    grid-column:1/8;
+	}
+    </style>
+  </head>
+  <body class="body">
+    <div id="page2grid">
+	<!--<header>--!>
+	    <div id="title" class="title"><p>My Projects:</p></div>
+	<!--</header>--!>
+        <!--<main>--!>
+	    <!--<section>--!>
+		<div id="cornerstone">
+		    <p class="subheading">Cornerstone at ACC</p>
+		    <p class="text">As part of the curriculum at Arlington Tech, Every grade is required to participate in a project spanning the entire school year from November to April. The project
+	varies in nature by grade, Moving from a grade-wide project in freshman year to an individualized project in senior year. Every core class (and some extras) has a singular focus for one month.
+	This focus relates to the project in some way. for example: This year's project focuses on making the commute to ACC more enjoyable for students. English's focus was public art, Engineering's
+	focus was on Transportation, ETC. The students then form teams and present a way to accomplish the proposed goal. The project that is judged "The Best" will be presented to the Arlington County
+	Board.</p>
+		</div>
+	    <!--</section>--!>
+	    <!--<section>--!>
+		<div id="Sony_PVM">
+		    <h3 class="subheading">Sony PVM</h3>
+		    <p class="text">I recently obtained a Sony PVM monitor from an auction of a nearby TV studio. PVM's are extremely desirable within the retro gaming community for their accuracy 
+	and wide range of features. To my dismay, once i powered on the PVM, i discovered that it was not working properly. The green seemed to be diminished and the deflection could not stay stable.
+	One of my main projects has been restoring this monitor so that i can either use it or resell it. I discovered what was going wrong within the CRT, and am planning to do a Re-Cap of the deflection 	    system and restore the green color. This project has been a learning experience for me and has taught me plenty of valuable skills regarding electronics repair.</p></div>
+	    <!--</section>--!>
+        <!--</main>--!>
+    </div>
+  </body>
+</html>
