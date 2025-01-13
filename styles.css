@@ -49,11 +49,11 @@
 #meWithMom{
         grid-area: 8/10/12/12;
 }
-#page2grid{
+/*#page2grid{
     display:grid;
     grid-template-rows:repeat(15, 1fr);
     grid-template-columns:repeat(15, 1fr);
-}
+}*/
 .body{
     background-color:LightBlue;
 }
