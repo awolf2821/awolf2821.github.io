@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Playground</title>
+        <script src="js/init.js"></script>
+<style>
+#img1{
+    width:100px;
+    height:100px;
+}
+#img2{
+    min-width:100px;
+    max-width:800px;
+    min-height:100px;
+    max-height:800px;
+}
+#customSizeDiv{
+    width:1400px;
+    height:800px;
+    align:center;
+}
+#img3{
+    align:left top;
+    object-fit:cover;
+}
+#img4{
+    border:5px solid;
+    border-radius:1px;
+}
+#img5{
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+}
+#img6{
+    opacity:50%;
+}
+#img7{
+    filter:blur(1px);
+}
+#img8a{
+    z-index:0;
+}
+#img8b{
+    position:relative;
+    top:50px;
+    right:25px;
+    z-index:1;
+}
+#img9{
+    filter:grayscale(100);
+}
+#img0{
+    filter:invert(0);
+}
+</style>
+    </head>
+    <body>
+        <div>
+            <img src="images/template.jpeg" alt="SMPTE Color Bars">
+            <p>Original Image</p>
+        <div>
+            <img src="images/template.jpeg" id="img1" alt="SMPTE Color Bars">
+            <p>Size Attributes (Width &amp; Height).</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img2" alt="SMPTE Color Bars">
+            <p>Size Attributes (Min/Max Width, Min/Max Height.</p>
+        </div>
+        <div id="customSizeDiv">
+            <img src="images/template.jpeg" id="img3" alt="SMPTE Color Bars">
+            <p>Align and Fit Attributes(Align, Fit, Posistion)</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img4" alt="SMPTE Color Bars">
+            <p>Border Attributes (Border, Border-Radius)</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img5" alt="SMPTE Color Bars">
+            <p>Box-Shadow Attribute</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img6" alt="SMPTE Color Bars">
+            <p>Opacity Attribute</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img7" alt="SMPTE Color Bars">
+            <p> Blur Filter Attribute</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img8a" alt="SMPTE Color Bars">
+            <img src="images/template2.png" id="img8b" alt="ACC Logo">
+            <p>Z-Index Attribute</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img9" alt="SMPTE Color Bars">
+            <p>Greyscale Filter Attribute</p>
+        </div>
+        <div>
+            <img src="images/template.jpeg" id="img10" alt="SMPTE Color Bars">
+            <p>Inverted Filter Attribute</p>
+        </div>
+    </body>
+</html>
+        
+
