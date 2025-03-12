@@ -59,6 +59,10 @@
 }
 #media{
 	grid-area: 8/10/12/12;
+        object-fit:contain;
+}
+#caption{
+    grid-area:8/13/12/15;
 }
 </style>
 </head>
@@ -87,11 +91,8 @@
 	On Github.</a></p>
 	<blockquote class="text"><strong>Innovation distinguishes between a leader and a follower</strong> -Steve Jobs</blockquote>
     </div>
-    <video id="media" width="640" height="360">
-        <source src="images/grass.webm" type="video/webm">
-        <source src="images/grass.mp4" type="video/mp4">
-        <p>Your browser does not support the video file format</p>
-    </video>
+    <iframe id="media" src="https://www.youtube.com/embed/OmBLsKV7Sx0?si=ip8IakAtjnTNWHxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p id="caption" class="text">My favorite youtube video</p>
 </div>
 </body>
 </html>
