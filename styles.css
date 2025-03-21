@@ -1,13 +1,18 @@
 #grid{
     display:grid;
-    grid-template-columns:repeat(15,100px);
-    Grid-template-rows:repeat(15, 100px);
+    grid-template-areas:
+    'image image image image image'
+    'image image text image image'
+    'image image image image image'
+    'title blank blank media media'
+    'para para para media media'
+    'title2 blank blank media media'
+    'para2 para2 para2 media media';
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows:repeat(6,1fr);
 }
 #frontText{
-    grid-row-start:3;
-    grid-row-end:5;
-    grid-column-start:7;
-    grid-column-end:9;
+    grid-area:span(text);
 }
 .title{
     padding:5px;
@@ -46,8 +51,8 @@
         grid-row-end:14;
         grid-column:1/8;
 }
-#meWithMom{
-        grid-area: 8/10/12/12;
+#media{
+    float:left;
 }
 #page2grid{
 	display:grid;
