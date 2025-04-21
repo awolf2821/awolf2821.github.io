@@ -1,82 +1,63 @@
 #grid{
-    display:grid;
-    grid-template-areas:
-    'image image image image image'
-    'image image text image image'
-    'image image image image image'
-    'title blank blank media media'
-    'para para para media media'
-    'title2 blank blank media media'
-    'para2 para2 para2 media media';
-    grid-template-columns:repeat(5,1fr);
-    grid-template-rows:repeat(6,1fr);
-}
-#frontText{
-    grid-area:span(text);
-}
-.title{
-    padding:5px;
-    margin:10px;
-    text-align:center;
-    font-family:"Jersey 15", serif;
-    font-size:5em;
-    color:white;
-    text-align:center;
-}
-.subheading{
-    padding:2px;
-    margin:6px;
-    font-size:4em;
-    font-family:"Jersey 15", serif;
-    color:white;
-}
-.text{
-    padding:1px;
-    margin:3px;
-    font-size:16px;
-    font-family:"Arial", serif;
-    color:white;
-}
-#aboutMe{
-        grid-row:8 / 9;
-        grid-column:1/8;
-}
-#hobbiesAndInterests{
-        grid-row:10/12;
-        grid-column-start:1;
-        grid-column-end:8;
-}
-#projects{
-        grid-row-start:13;
-        grid-row-end:14;
-        grid-column:1/8;
-}
-#media{
-    float:left;
-}
-#page2grid{
-	display:grid;
-        grid-template-rows:repeat(15, 1fr);
-        grid-template-columns:repeat(15, 1fr);
-}
-.body{
-	background-color:LightBlue;
-}
-#title{
-        grid-row-start:1;
-        grid-column:1/8;
-        text-align:left;
-}
-#cornerstone{
-        grid-row-start:2;
-        grid-row-end:3;
-        grid-column:1/8;
-}
-#Sony_PVM{
+        display:grid;
+        grid-template-columns:repeat(15,100px);
+        Grid-template-rows:repeat(15, 100px);
+    }
+    #frontText{
         grid-row-start:3;
-        grid-row-end:6;
-        grid-column:1/8;
-}
+        grid-row-end:5;
+        grid-column-start:7;
+        grid-column-end:9;
+    }
+    .title{
+        padding:5px;
+        margin:10px;
+        text-align:center;
+        font-family:"Jersey 15", serif;
+        font-size:5em;
+        color:white;
+        text-align:center;
+    }
+    .subheading{
+        padding:2px;
+        margin:6px;
+        font-size:4em;
+        font-family:"Jersey 15", serif;
+        color:white;
+    }
+    .text{
+        padding:1px;
+        margin:3px;
+        font-size:16px;
+        font-family:"Arial", serif;
+        color:white;
+    }
+    #aboutMe{
+            grid-row:8 / 9;
+            grid-column:1/8;
+    }
+    #hobbiesAndInterests{
+            grid-row:10/12;
+            grid-column-start:1;
+            grid-column-end:8;
+    }
+    #projects{
+            grid-row-start:13;
+            grid-row-end:14;
+            grid-column:1/8;
+    }
+    #media{
+            grid-area: 8/10/12/12;
+            object-fit:contain;
+            transition: width 2s;
+    }
+        #media:hover{
+            width: 500px;
+            height: 500px;
+        }
+    #caption{
+        grid-area:8/13/12/15;
+    }
 
 
 
