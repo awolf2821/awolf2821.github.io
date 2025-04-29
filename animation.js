@@ -13,7 +13,12 @@ const player={
     x:200,
     y:200,
     color:"Green",
-    speed:3
+    speed:5
+}
+//Keylogger
+//To add to keys, we use syntax keys['ArrowUp'], true
+const keys={
+
 }
 
 //define functions
@@ -37,15 +42,44 @@ function drawPlayer(){
         ctx.fill();
 }
 
+function movePlayer(){
+    
+    if(keys['ArrowDown']){
+        player.y += player.speed;
+    }
+    if(keys['ArrowUp']){
+        player.y -= player.speed;
+    }
+    if(keys['ArrowLeft']){
+        player.x -= player.speed;
+    }
+    if(keys['ArrowRight']){
+        player.x += player.speed;
+    }
+
+    if(player.x > 780){
+        player.x = 780;
+    }
+    if(player.x < 20){
+        player.x = 20;
+    }
+    if(player.y > 580){
+        player.y = 580;
+    }
+    if(player.y < 20){
+        player.y = 20;
+    }
+}
+
 function animate() {
     //Inversion Detection and Logic:
-    if(x>1920){
+    if(x>750){
         dX = dX * -1;
     }
     if(x<0){
         dX = dX * -1;
     }
-    if(y>1080){
+    if(y>550){
         dY = dY * -1;
     }
     if(y<0){
@@ -58,14 +92,16 @@ function animate() {
     x = x+dX;
     y = y+dY;
 
-    function handleKeyPress(e){
-        console.log(e.key);
-    }
-
-    document.addEventListener('keydown', handleKeyPress);
+    document.addEventListener('keydown', (e) => {
+        keys[e.key] = true;
+    });
+    document.addEventListener('keyup', (e) => {
+        keys[e.key] = false;
+    });
 
     requestAnimationFrame(animate);
     drawRect(x,y);
+    movePlayer();
     drawPlayer();
 
 }
