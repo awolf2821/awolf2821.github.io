@@ -15,10 +15,10 @@ const player={
     color:"Green",
     speed:5
 }
+
 //Keylogger
 //To add to keys, we use syntax keys['ArrowUp'], true
 const keys={
-
 }
 
 //define functions
