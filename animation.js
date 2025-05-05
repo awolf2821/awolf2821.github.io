@@ -1,12 +1,12 @@
 const canvas = document.getElementById("animationCanvas");
 const ctx = canvas.getContext("2d");
 
-let x = 0;
-let y = 0;
-let dX = 5;
-let dY = 5;
-let xInvert = false;
-let yInvert = false;
+const box ={
+    x:0,
+    y:0,
+    dX:5,
+    dY:5
+}
 
 const player={
     //variables use key:value pair syntax
@@ -14,6 +14,12 @@ const player={
     y:200,
     color:"Green",
     speed:5
+}
+
+const game={
+    frames:0,
+    score:0,
+    gamerunning:true
 }
 
 //Keylogger
@@ -28,6 +34,26 @@ function drawRect(x,y) {
     ctx.fillStyle = 'blue';
     ctx.fillRect(x,y,50,50);
     ctx.fill();
+}
+
+function collisionCheck(){
+    let player_min_x = player.x-20;
+    let player_min_y = player.y-20;
+    let player_max_x = player.x+20;
+    let player_max_y = player.y+20;
+
+    let box_min_x = box.x-50;
+    let box_min_y = box.y-50;
+    let box_max_x = box.x+50;
+    let box_max_y = box.y+50;
+
+    if(box_max_y > player_min_y &&
+        box_min_y < player_max_y &&
+        box_max_x > player_min_x &&
+        box_min_x < player_max_x
+    ){
+        game.gamerunning = false;
+    }
 }
 
 function drawPlayer(){
@@ -74,23 +100,23 @@ function movePlayer(){
 function animate() {
     //Inversion Detection and Logic:
     if(x>750){
-        dX = dX * -1;
+        box.dX = box.dX * -1;
     }
     if(x<0){
-        dX = dX * -1;
+        box.dX = box.dX * -1;
     }
     if(y>550){
-        dY = dY * -1;
+        box.dY = box.dY * -1;
     }
     if(y<0){
-        dY = dY * -1;
+        box.dY = box.dY * -1;
     }
     //In order to handle an event we need two things:
         //-Event handler, does things because event
         //-Event listener, notices when an event happens and calls the handler
 
-    x = x+dX;
-    y = y+dY;
+    box.x = box.x+box.dX;
+    box.y = box.y+box.dY;
 
     document.addEventListener('keydown', (e) => {
         keys[e.key] = true;
@@ -105,6 +131,5 @@ function animate() {
     drawPlayer();
 
 }
-
-//call our function
 animate();
+
