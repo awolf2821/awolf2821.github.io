@@ -18,4 +18,5 @@ Interaction will be handled fairly easily with the scores and reset buttons bein
 use the arrow keys to create a turn point for the snake. Each block will follow through the turn point and reorient properly (i.e start moving left instead of up).
 
 ## MVP
-The MVP for this will include at the least, a mechanic for moving the snake, wall touch detection, and random fruit location generation. The background and initial tiling won't be present, and the snake will be able to move freely from the grid not using the turn points. 
+The snake will be able to move around on the backround with player input with arrow keys.
+ 
