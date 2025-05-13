@@ -6,7 +6,12 @@ let snake = {
     headX:2,
     headY:16,
     currentHeading:"east",
+    speed:1,
 }
+
+let snakePositions = [];
+const keys = {};
+
 function drawBackground(){
     let x = 0;
     let y = 0;
@@ -43,42 +48,53 @@ function drawBackground(){
         y=y+40;
     }
 }
-function drawSnake(headX, headY, length){
-    //Draw Head
+function logSnakePosition(x, y){
+    let tempArray = [];
+    tempArray.push(x,y);
+    snakePositions.push(tempArray);
+}
+function moveSnake(){
+    if(keys['ArrowUp'] || snake.currentHeading == "north"){
+        snake.currentHeading = "north";
+        snake.headY += snake.speed;
+    }
+    if(keys['ArrowDown'] || snake.currentHeading == "south"){
+        snake.currentHeading = "south";
+        snake.headY -= snake.speed;
+    }
+    if(keys['ArrowLeft'] || snake.currentHeading == "west"){
+        snake.currentHeading = "west"
+        snake.headX -= snake.speed;
+    }
+    if(keys['ArrowRight'] || snake.currentHeading == "east"){
+        snake.currentHeading = "east";
+        snake.headX += snake.speed;
+    }
+
+}
+
+function drawSnake(headX, headY){
     ctx.fillStyle = "#0390fc";
-    ctx.fillRect(headX * 20, headY * 20, 20, 20);
+    ctx.fillRect(headX*20, headY*20, 20, 20);
     ctx.fill();
-    //Draw Tail
-    let direction = snake.currentHeading;
-    let penX = headX;
-    let penY = headY;
-    let changesDirection = false;
-    for(let l=0; l<length; l++){
-        //Check to see if snake changes direction and adjust values
-        changesDirection = checkTurnPoints(penX, penY);
-        if(changesDirection){
-            let penDirection = readTurnPoints(penX, penY);
-        }
-
-        if(penDirection = "north"){
-            penY -=1;
-        }
-        if(penDirection = "south"){
-            penY += 1;
-        }
-        if(direction = "east"){
-            penX -= 1;
-        }
-        if(direction = "west"){
-            penX += 1;
-        }
-        //Draw Body
+    for(let i=0; i<snake.length; i++){
+        let penX = snakePositions[snakePositions.length - i[0]];
+        let penY = snakePositions[snakePositions.length -i[1]];
         ctx.fillStyle = "#0390fc";
-        ctx.fillRect(penX * 20, penY * 20, 20, 20);
+        ctx.fillRect(penX*20, penY*20, 20, 20);
         ctx.fill();
-
     }
 }
 drawBackground();
-
-drawSnake(16,16,1);
+function drawFrame(){
+    logSnakePosition(snake.headX, snake.headY);
+    document.addEventListener('keydown', (e) =>{
+        keys[e.key] = true;
+    });
+    document.addEventListener('keyup', (e) =>{
+        keys[e.key] = false;
+    });
+    moveSnake();
+    drawSnake(snake.headX, snake.headY);
+}
+drawFrame();
