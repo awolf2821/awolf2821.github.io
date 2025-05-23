@@ -9,11 +9,23 @@
                 width: 640;
                 height: 640;
             }
+            .body{
+                background-color: #363131;
+            }
+            .text{
+                color:white;
+            }
         </style>
     </head>
-    <body>
+    <body class="body">
+        <h1 class="text">Snake!</h1>
         <canvas id="gameCanvas" width="640" height="640"></canvas>
 
         <script src="js_game.js"></script>
+
+        <p class="text">Classic Snake Game. Use the arrow keys to move and don't hit the walls!</p>
+        <p id="currentScore" class="text">Score: No Value yet!</p>
+        <p id="highScore" class="text">High Score: No Value Yet!</p>
+        <button id="resetButton">Reset!</button>
     </body>
 </html>
