@@ -10,3 +10,4 @@ Web Design.
 - [Ocober 23 - Math Notes](entries/MathNotes.md)
 - [March 21 - Study Plan](entries/Study.md)
 - [May 1 - Game Intro](entries/Game.md)
+- [June 11 - Final Project](entries/Final.md)
