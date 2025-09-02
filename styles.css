@@ -1,1 +1,98 @@
-/*This is my CSS styles file. This is under construction as well. Check back later for updates!*/
+#grid{
+        display:grid;
+        grid-template-columns:repeat(15,100px);
+        Grid-template-rows:repeat(15, 100px);
+    }
+    #frontText{
+        grid-row-start:3;
+        grid-row-end:5;
+        grid-column-start:7;
+        grid-column-end:9;
+    }
+    .title{
+        padding:5px;
+        margin:10px;
+        text-align:center;
+        font-family:"Jersey 15", serif;
+        font-size:5em;
+        color:white;
+        text-align:center;
+    }
+    .subheading{
+        padding:2px;
+        margin:6px;
+        font-size:4em;
+        font-family:"Jersey 15", serif;
+        color:white;
+    }
+    .text{
+        padding:1px;
+        margin:3px;
+        font-size:16px;
+        font-family:"Arial", serif;
+        color:white;
+    }
+    #aboutMe{
+            grid-row:8 / 9;
+            grid-column:1/8;
+    }
+    #hobbiesAndInterests{
+            grid-row:10/12;
+            grid-column-start:1;
+            grid-column-end:8;
+    }
+    #projects{
+            grid-row-start:13;
+            grid-row-end:14;
+            grid-column:1/8;
+    }
+    #media{
+            grid-area: 8/10/12/12;
+            object-fit:contain;
+            transition: width 2s;
+    }
+        #media:hover{
+            width: 500px;
+            height: 500px;
+        }
+    #caption{
+        grid-area:8/13/12/15;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
