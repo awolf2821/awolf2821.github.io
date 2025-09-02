@@ -1,0 +1,13 @@
+body{
+    background-color:Azure;
+}
+header{
+	background-color:MediumTurquoise;
+}
+td, th, table{
+	border:1px solid;
+	border-collapse:collapse;
+}
+nav{
+	background-color:MediumTurquoise;
+}

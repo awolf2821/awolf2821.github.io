@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>Grid 1</title>
+	<script src="../js/init.js"></script>
+<style>
+    #grid{
+	display:grid;
+	grid-template-rows:repeat(5, 1fr);
+	grid-template-columns:repeat(5, 1fr);
+	gap:2px;
+	text-align:center;
+	font-size:4em;
+    }
+    #header{
+	grid-row:1;
+	grid-column:1/7;
+	background-color:LightBlue;
+    }
+    #side1{
+	grid-column-start:1;
+	grid-row-start:2;
+	grid-row-end:5;
+	background-color:LightBlue;
+    }
+    #main{
+	grid-column-start:2;
+	grid-column-end:-1;
+	grid-row-start:2;
+	grid-row-end:-2;
+	background-color:LightBlue;
+    }
+    #side2{
+	grid-row:2/-2;
+	grid-column:6/7;
+	background-color:LightBlue;
+    }
+    #foot{
+	grid-row-start:5;
+	grid-column:1 / 7;
+	background-color:LightBlue;
+    }	
+</style>
+    </head>
+    <body>
+	<div id="grid">
+	    <div id="header"><p>Header</p></div>
+	    <div id="side1"><p>Side</p></div>
+	    <div id="main"><p>Main</p></div>
+	    <div id="side2"><p>Side</p></div>
+	    <div id="foot"><p>Foot</p></div>
+	</div>
+    </body>
+</html>
+	
